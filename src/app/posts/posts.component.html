@@ -1,0 +1,8 @@
+<div>
+  <app-post-item *ngFor="let post of posts" [post]="post" [deletePost]="deletePost"></app-post-item>
+  <mat-paginator [length]="totalPosts"
+                 [pageSize]="5"
+                 (page)="pageEvent = pageChange($event)">
+  </mat-paginator>
+</div>
+

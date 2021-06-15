@@ -1,0 +1,13 @@
+<form class="form" [formGroup]="form">
+  <mat-form-field class="full-width">
+    <mat-label>Title</mat-label>
+    <input formControlName="title" matInput placeholder="Write your title...">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Description</mat-label>
+    <textarea formControlName="description" matInput placeholder="Describe your post..."></textarea>
+  </mat-form-field>
+
+  <button (click)="saveChanges(form)" mat-raised-button color="primary" type="button">Save</button>
+</form>

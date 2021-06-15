@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content class="mat-typography">
+  {{data.desc}}
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" *ngIf="data.showOkButton">Ok</button>
+  <button mat-button mat-dialog-close [mat-dialog-close]="false">Close</button>
+</mat-dialog-actions>
+

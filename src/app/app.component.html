@@ -1,0 +1,6 @@
+<mat-toolbar>
+  <button mat-button routerLink="posts" [queryParams]="{'page': 1}">All posts</button>
+  <mat-divider [vertical]="true"></mat-divider>
+  <button mat-button routerLink="postForm">Create post</button>
+</mat-toolbar>
+<router-outlet></router-outlet>
