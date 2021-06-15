@@ -8,10 +8,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "mock:server": "json-server --watch mocks/db.json",
+	"start:mock:server": "concurrently — kill-others \"npm run mock:server\" \"npm run start\""
   },
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@angular-mdc/web": "^5.1.1",
     "@angular/animations": "~10.2.4",
     "@angular/cdk": "^12.0.4",
@@ -25,7 +28,9 @@
     "@angular/router": "~10.2.4",
     "@ng-bootstrap/ng-bootstrap": "^9.1.2",
     "bootstrap": "^5.0.1",
+    "json-server": "^0.16.3",
     "rxjs": "~6.6.0",
+    "save-dev": "0.0.1-security",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
@@ -33,10 +38,11 @@
     "@angular-devkit/build-angular": "~0.1002.1",
     "@angular/cli": "~10.2.1",
     "@angular/compiler-cli": "~10.2.4",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "concurrently": "^6.2.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
